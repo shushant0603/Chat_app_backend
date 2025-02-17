@@ -1,0 +1,19 @@
+/*signup logic{ 
+1) this is a post request
+2}req.body se jo lena hai le lo like name, email, password
+3}try catch block start kro
+4} check all fields are filled or not
+5} check if same email exists in that data base or not{
+    if yes then throw error
+    }
+6} password ko hash kro using bcrypt
+7} create a new user with all the details with hasshedpassword
+8} if{
+user created-> generate token and save Newuser and send response in json to frontend
+}else{
+    throw error
+     }
+
+}
+
+}*/
