@@ -4,7 +4,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js"
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,7 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "bcryptjs": "^3.0.0",
+    "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
