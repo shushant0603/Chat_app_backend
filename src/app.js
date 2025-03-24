@@ -10,12 +10,12 @@ import messageRoutes from './routes/message.route.js'; //import message route th
 dotenv.config(); // dotenv configuration krna hota hai 
 
 
-const PORT=process.env.PORT; //port number ko process.env.PORT me store krna hota hai
+const PORT=process.env.PORT || 5001; //port number ko process.env.PORT me store krna hota hai
 
 app.use(express.json({ limit: '10mb' })); // parses incoming request withJSON payloads
 app.use(cookieParser()); // parses cookies attacged to the client request object
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: "https://chat-app-frontend-git-main-shushant-kumars-projects.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
