@@ -15,7 +15,7 @@ const PORT=process.env.PORT || 5001; //port number ko process.env.PORT me store 
 app.use(express.json({ limit: '10mb' })); // parses incoming request withJSON payloads
 app.use(cookieParser()); // parses cookies attacged to the client request object
 app.use(cors({
-    origin: "https://chat-app-frontend-git-main-shushant-kumars-projects.vercel.app",
+    origin: "*",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
