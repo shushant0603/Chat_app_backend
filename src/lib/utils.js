@@ -1,15 +1,13 @@
-import jwt from 'jsonwebtoken';
-export const generateToken=(userId,res)=>{
-    const token=jwt.sign({id:userId},process.env.JWT_SECRET,{
-        expiresIn:"30d",
-    });
- res.cookie("token",token,{
-        httpOnly:true,
-        maxAge:30*24*60*60*1000,
-        sameSite:"strict",
-        secure:process.env.NODE_ENV==="production",
-        sameSite: "strict",
- })
- return token;
+import jwt from "jsonwebtoken";
 
-}
+// Generate Token
+export const generateToken = (userId) => {
+    return jwt.sign({ userId }, process.env.JWT_SECRET, {
+        expiresIn: "30d",
+    });
+};
+
+// Verify Token
+export const verifyToken = (token) => {
+    return jwt.verify(token, process.env.JWT_SECRET);
+};
