@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js",
+    "build": "echo \"No build step defined\"",
      "start": "node src/app.js"
   },
   "keywords": [],
