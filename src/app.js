@@ -16,6 +16,7 @@ app.use(express.json({ limit: '10mb' })); // parses incoming request withJSON pa
 app.use(cookieParser()); // parses cookies attacged to the client request object
 app.use(cors({
     origin:"https://chat-app-frontend-ugxs.onrender.com",
+    methods:["GET","POST","PUT","DELETE"],
     credentials:true,
 }));
 
