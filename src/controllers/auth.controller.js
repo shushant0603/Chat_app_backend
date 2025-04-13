@@ -46,20 +46,7 @@ export const signup= async(req,res)=>{
          res.status(500).json({message:"internal server error"});
    }
 }
-// export const signup=async(req,res)=>{
-// const {fullname,email,password}=req.body;
-// try{
 
-//     if(!fullname || !email || !password){
-//        return res.status(400).json({message:"all fields are required"});
-
-//     }
-
-// }catch(err){
-
-// }
-
-// }
 export const login= async(req,res)=>{
  const {email,password}=req.body;
     if(!email || !password){
