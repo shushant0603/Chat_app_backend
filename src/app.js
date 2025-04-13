@@ -14,7 +14,11 @@ const PORT=process.env.PORT; //port number ko process.env.PORT me store krna hot
 
 app.use(express.json({ limit: '10mb' })); // parses incoming request withJSON payloads
 app.use(cookieParser()); // parses cookies attacged to the client request object
-app.use(cors());
+app.use(cors({
+    origin:"https://chat-app-frontend-ugxs.onrender.com",
+    methods: ["GET", "POST"],
+    credentials:true,
+}));
 
 
 app.use("/api/auth",authRoutes); //use the authRoutes for the /api/auth endpoint mtlb ki jo bhi route /api/auth 
